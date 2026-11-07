@@ -1,0 +1,20 @@
+{
+  "name": "轴套（衬套）",
+  "desc": "外圆 + 内孔的空心套，用于轴承位、导向套。改 D/d/H 即可",
+  "template": "part",
+  "save_as": "轴套.SLDPRT",
+  "vars": {
+    "D": 40,
+    "d": 20,
+    "H": 30
+  },
+  "steps": [
+    {"op": "circle", "plane": "front", "r": "D/2"},
+    {"op": "extrude", "depth": "H"},
+    {"op": "circle", "plane": "front", "r": "d/2"},
+    {"op": "cut", "through_all": true},
+    {"op": "material", "name": "黄铜"},
+    {"op": "property", "name": "名称", "value": "轴套"},
+    {"op": "property", "name": "图号", "value": "BU-001"}
+  ]
+}

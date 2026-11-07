@@ -1,0 +1,24 @@
+{
+  "name": "圆形法兰盘",
+  "desc": "中心通孔 + 圆周均布螺栓孔。改 vars 里的 D/d/t/n/pcd/bd 即可整体联动",
+  "template": "part",
+  "save_as": "法兰盘.SLDPRT",
+  "vars": {
+    "D": 120,
+    "d": 60,
+    "t": 15,
+    "n": 6,
+    "pcd": 95,
+    "bd": 11
+  },
+  "steps": [
+    {"op": "circle", "plane": "front", "r": "D/2"},
+    {"op": "extrude", "depth": "t"},
+    {"op": "circle", "plane": "front", "r": "d/2"},
+    {"op": "cut", "through_all": true},
+    {"op": "bolt_circle", "plane": "front", "n": "n", "pcd": "pcd", "d": "bd"},
+    {"op": "material", "name": "普通碳钢"},
+    {"op": "property", "name": "名称", "value": "圆形法兰盘"},
+    {"op": "property", "name": "图号", "value": "FL-001"}
+  ]
+}

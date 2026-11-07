@@ -1,0 +1,23 @@
+{
+  "name": "方形安装板",
+  "desc": "矩形板 + 四角定位孔。改 L/W/t/x/y/d 联动，适合做底板、盖板、连接板",
+  "template": "part",
+  "save_as": "安装板.SLDPRT",
+  "vars": {
+    "L": 120,
+    "W": 80,
+    "t": 6,
+    "x": 48,
+    "y": 28,
+    "d": 6.5
+  },
+  "steps": [
+    {"op": "rect", "plane": "front", "w": "L", "h": "W"},
+    {"op": "extrude", "depth": "t"},
+    {"op": "holes", "plane": "front", "d": "d",
+     "at": [["x", "y"], ["-x", "y"], ["-x", "-y"], ["x", "-y"]]},
+    {"op": "material", "name": "铝"},
+    {"op": "property", "name": "名称", "value": "方形安装板"},
+    {"op": "property", "name": "图号", "value": "PL-001"}
+  ]
+}
