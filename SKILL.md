@@ -205,4 +205,6 @@ python -m pip install pywin32 pillow
 连不上、报「找不到成员」、改了不生效、文档被占用 → 看
 `references/troubleshooting.md`。
 想改这个技能自身的代码，先读 `references/com-traps.md`，
-里面是踩过的 12 个 SolidWorks COM 陷阱，每条都写着错误现象和成因。
+里面是踩过的 SolidWorks COM 陷阱，每条都写着错误现象和成因。
+写装配体配合 / 跑干涉检查，先读 `references/assembly-mates.md`，
+里面是配合类型枚举值、选面、干涉数组传参等实战坑。
